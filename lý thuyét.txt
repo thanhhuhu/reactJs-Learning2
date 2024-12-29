@@ -1,0 +1,18 @@
+1. dịch code - babel compiler => code nhiều version của js 
+require
+import const
+2. tối ưu code , nén nó thành 1 vài file : css/ js : webpack
+
+create-react-app đã cấu hình , chỉ cần làm việc với nó 
+
+index.js tổng hợp code react, nhúng vào bên trong một div id là root bên trong của index.html
+
+component giúp code ít đi và có thể dễ dàng chỉnh sửa hơn
+
+class component 
+function component
+
+render bên trong sẽ tập hợp khối html để tạo dao diện đó 
+JSX cho phép code js vào trong code html 
+
+lưu ý : bên trong một jsx (render) chỉ có một element (thẻ div) nếu có cái thứ 2 sẽ gây ra lỗi 

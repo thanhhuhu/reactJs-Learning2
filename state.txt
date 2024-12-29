@@ -1,0 +1,8 @@
+state là một biến object 
+state = {
+	name ...
+}
+state là cách react kiểm soát data của component
+khi thay đổi dữ liệu trong state thì component cũng sẽ thay đổi theo 
+
+Dom events 
