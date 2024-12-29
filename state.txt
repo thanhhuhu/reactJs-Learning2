@@ -6,3 +6,7 @@ state là cách react kiểm soát data của component
 khi thay đổi dữ liệu trong state thì component cũng sẽ thay đổi theo 
 
 Dom events 
+
+Mỗi lần thay đổi biến state thì giao diện của biến state sẽ thay đổi
+Merge state 
+Props => viết tắt properties
