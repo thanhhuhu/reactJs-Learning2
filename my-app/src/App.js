@@ -28,13 +28,28 @@ class App extends React.Component {
         // console.log(event.pageX);
 
     }
+    handOnchaneInput=(event) => {
+        this.setState({
+            name:event.target.value,
+
+        })
+       console.log(event,event.target.value)
+    }
+    handleOnSubmit = (event) =>{
+      event.preventDefault();
+     console.log(this.state.name)
+    }
     render (){
         return (
             <div>
                 My name is {this.state.name} and i'm {this.state.age}
                 <br/>
                 <button onMouseOver={this.handlOnMoverOver}>Hover me</button>
-                <button onClick={(event) => {this.handleClick (event)} }>Click me</button>
+                <button onClick={(event) => {this.handleClick(event)}}>Click me</button>
+                <form onSubmit ={(event) =>{this.handleOnSubmit(event)}}>
+                    <input type="text" onChange={(event)=> this.handOnchaneInput(event)}/>
+                    <button>Submit</button>
+                </form>
             </div>
         );
     }
