@@ -1,7 +1,7 @@
 // class component
 // function component
 import React from 'react';
-import UserInfor from "./UserInfor";
+import AddUserInfor from "./AddUserInfor";
 import DisplayInfor from "./DisplayInfor";
 class MyComponent extends React.Component{
     //JSX
@@ -21,21 +21,37 @@ class MyComponent extends React.Component{
     //     })
     state ={
         listUser:  [
-            {id:1, name: "thanh", age: "22"},
+            {id:1, name: "thanh", age: "16"},
             {id:2, name: "chau", age: "21"},
             {id:3, name: "dung", age: "23"},
 
         ]
     }
+    handleAddNewUser=(userObject)=>{
+        // cách 1
+        let listUserNew =this.state.listUser;
+        listUserNew.push(userObject);
+        this.setState({
+            listUser: listUserNew
+        })
+
+        // cách 2
+        // cập nhật tên và tuổi vào bảng tiếp sau khi nhấn submit
+        // this.setState({
+        //     // dấu 3 chấm là để copy toàn bộ mảng từ trước,
+        //     listUser: [userObject,...this.state.listUser]
+        // })
+    }
+    //JSX
     render() {
         //Dry: dont repeat yourself
         return (
             <div>
-                <UserInfor></UserInfor>
+                <AddUserInfor handleAddNewUser={this.handleAddNewUser} />
                 <br/><br/>
                 <DisplayInfor
                     listUser = {this.state.listUser}
-                    users = {this.state.listUser}
+                    // users = {this.state.listUser}
                 />
             </div>
 
