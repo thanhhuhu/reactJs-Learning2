@@ -10,3 +10,35 @@ Dom events
 Mỗi lần thay đổi biến state thì giao diện của biến state sẽ thay đổi
 Merge state 
 Props => viết tắt properties
+
+
+  // Sử dụng if else để hiện những người có số tuổi lớn 18 và tùy theo màu
+
+                    // if (+user.age > 18)
+                    // {
+                    //     return (
+                    //         <div key={user.id} className="green">
+                    //             <div>My name 's {user.name}</div>
+                    //             <div>I'm {user.age}</div>
+                    //             <hr/>
+                    //         </div>
+                    //     )
+                    // } else {
+                    //     return (
+                    //         <div key={user.id} className="red">
+                    //             <div>My name 's {user.name}</div>
+                    //             <div>Im' {user.age} </div>
+                    //             <hr/>
+                    //         </div>
+                    //     )
+                    // }
+
+                })
+                {/*<div>My name is {name}</div>*/}
+                {/*<div>My age is {age}</div>*/}
+                {/*<hr/>*/}
+                {/*<div>My name is {name}</div>*/}
+                {/*<div>My age is {age}</div>*/}
+                {/*<hr/>*/}
+                {/*<div>My name is {name}</div>*/}
+                {/*<div>My age is {age}</div>*/}

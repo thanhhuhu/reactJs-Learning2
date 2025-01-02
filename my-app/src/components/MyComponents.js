@@ -42,19 +42,36 @@ class MyComponent extends React.Component{
         //     listUser: [userObject,...this.state.listUser]
         // })
     }
+
+    handleDeleteUser=(userID)=>{
+        let listUserClone = [this.state.listUser];
+        listUserClone = listUserClone.filter(item =>item.id !== userID);
+        this.setState({
+            listUser: listUserClone
+        })
+    }
     //JSX
     render() {
+        const test = 'thanh'
         //Dry: dont repeat yourself
         return (
-            <div>
-                <AddUserInfor handleAddNewUser={this.handleAddNewUser} />
-                <br/><br/>
-                <DisplayInfor
-                    listUser = {this.state.listUser}
-                    // users = {this.state.listUser}
-                />
-            </div>
+            <>
+                {/*in trực tiếp kiểu string ra màn hình */}
+                {test}
+                {JSON.stringify(test)}
+                <div className="a">
+                    <AddUserInfor handleAddNewUser={this.handleAddNewUser}/>
+                    <br/><br/>
+                    <DisplayInfor
+                        listUser={this.state.listUser}
+                        // users = {this.state.listUser}
+                        handleDeleteUser={this.handleDeleteUser}
+                    />
+                </div>
+                <div className="b">
 
+                </div>
+            </>
         )
     }
 }

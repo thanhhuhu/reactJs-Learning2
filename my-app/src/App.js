@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import MyComponent  from "./components/MyComponents";
 import React from 'react';
 import DisplayInfor from "./components/DisplayInfor";
@@ -67,7 +67,7 @@ class App extends React.Component {
             //
             //     </form>
             // </div>
-            <div>
+            <div className="app-container">
                 <MyComponent></MyComponent>
             </div>
     );
